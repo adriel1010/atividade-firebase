@@ -1,0 +1,28 @@
+<!--
+  Generated template for the ResultadosPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>resultados</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <h4>click para ver detalhes </h4>
+
+  <ion-list>
+    <ion-item *ngFor="let im of items | async" (click)="verificarAlimentacao(im.imc)">
+      <h3>{{im.nome}}</h3>
+      <h2>{{im.imc}}</h2>
+    </ion-item>
+  </ion-list>
+
+
+</ion-content>
